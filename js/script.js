@@ -2,7 +2,9 @@ var currentDay = $('#currentDay'); //variable that points to the day in the DOM
 var currentTime = $('#currentTime'); //variable that points to the time in the DOM
 
 var gpsButton = $('#use-location'); //points to the gps icon in the DOM
-let inputButton = $('#input-btn') //points to the input (SEARCH) botton in the DOM
+let inputButton = $('#input-btn'); //points to the input (SEARCH) botton in the DOM
+let cityInput = $('#input-box'); //captures the city entered in the input box
+let cityName ='';
 
 var currentHour = dayjs().hour(); //gets the current hour
 
@@ -21,16 +23,40 @@ $(gpsButton).on('click', function(){
 });
 
 $(inputButton).on('click', function(){
-    getWeatherData();
+    cityName = cityInput.val();
+    getWeatherDataCity();
     console.log('input entered');
+    cityInput.val('');
+    
 });
+
+// function clearInput(){
+//     cityInput.
+// }
+
+function getWeatherDataCity() { //function that gets weather data from open weather man api
+    navigator.geolocation.getCurrentPosition((success) => {         let { latitude, longitude } = success.coords;
+
+
+
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=imperial`).then(res=>res.json()).then(data=>{
+            console.log(data)
+        })
+
+    })
+}
+
+// function getLatLog(city){
+
+
+// }
 
 
 function getWeatherData() { //function that gets weather data from open weather man api
     navigator.geolocation.getCurrentPosition((success) => { 
         let { latitude, longitude } = success.coords;
 
-        fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`).then(res=>res.json()).then(data=>{
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`).then(res=>res.json()).then(data=>{
             console.log(data)
         })
 
