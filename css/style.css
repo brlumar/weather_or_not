@@ -7,8 +7,9 @@
 body {
     background-image: url(../images/istockphoto-477110708-170667a.webp);
     background-size: cover;
-    overflow: hidden;
-    background-repeat: no-repeat;
+    /* overflow: hidden; */
+    background-repeat: no-repeat; 
+
     height: 100vh;
 
 
@@ -23,7 +24,7 @@ body {
     /* background: rgba(237, 212, 50, 0.778); */
     background-image: url(../images/sea-164989_1280.jpg);
     background-position: bottom;
-    background-repeat:repeat;
+    background-repeat: repeat;
     max-width: 800;
     color: azure;
 }
@@ -67,6 +68,12 @@ body {
     border-radius: 10%;
 }
 
+#todays-container {
+    display: flex;
+    justify-content: center;
+
+}
+
 .todays-container {
 
     display: flex;
@@ -83,17 +90,19 @@ body {
     font-size: x-large;
 }
 
+
 #today-icon {
     max-width: 150px;
 }
-#current-city{
+
+#current-city {
     padding: 30px;
 }
 
 .column {
     display: flex;
     justify-content: center;
-    max-width: 600px;
+    max-width: 200px;
     max-height: 300px;
     /* flex-direction: column; */
     background: rgba(24, 24, 27, 0.6);
@@ -102,5 +111,21 @@ body {
     margin: 20px;
     border: 1px solid #eee;
     color: azure;
-    font-size: x-large;
+    font-size: medium;
+    justify-content: space-around;
+}
+
+#five-day-forecast {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width:730px) {
+    .columns {
+        justify-content: start;
+        align-items: none;
+        overflow-y: scroll;
+        padding: 10px 5px;
+        margin: 5px;
+    }
 }
