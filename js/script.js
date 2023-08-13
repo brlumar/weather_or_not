@@ -1,7 +1,8 @@
 var currentDay = $('#currentDay'); //variable that points to the day in the DOM
 var currentTime = $('#currentTime'); //variable that points to the time in the DOM
 
-var gpsButton = $('#use-location');
+var gpsButton = $('#use-location'); //points to the gps icon in the DOM
+let inputButton = $('#input-btn') //points to the input (SEARCH) botton in the DOM
 
 var currentHour = dayjs().hour(); //gets the current hour
 
@@ -15,7 +16,13 @@ setInterval(function () {
 }, 1000);
 
 $(gpsButton).on('click', function(){
+    getWeatherData();
     console.log('button clicked');
+});
+
+$(inputButton).on('click', function(){
+    getWeatherData();
+    console.log('input entered');
 });
 
 
@@ -29,4 +36,5 @@ function getWeatherData() { //function that gets weather data from open weather 
 
     })
 }
-getWeatherData();
+
+

@@ -6,7 +6,7 @@
 
 body {
     background-image: url(../images/istockphoto-477110708-170667a.webp);
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat; 
 
     height:fit-content; 
@@ -26,6 +26,10 @@ body {
     max-width: 800;
     color: azure;
 }
+.title-top{
+    display: flex; 
+    justify-content: space-between; 
+} 
 
 #time-container {
     font-family: 'Times New Roman', Times, serif;
@@ -40,7 +44,7 @@ body {
     padding: 10px;
     background-color: aliceblue;
     color: black;
-    max-width: 60px;
+    max-width: 80px;
 
 }
 

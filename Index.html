@@ -13,31 +13,40 @@
 
 <body>
     <div class="container title-box">
-        <h1 class="title is-1 has-text-light">
-            WeatherOrNot
-        </h1>
-        <p class="subtitle has-text-light">
-            Your <strong class="has-text-light">Travel Weather</strong> source!
-        </p>
-        <section id="time-container">
-            <p id="currentTime"></p>
-        </section>
+        <div class="title-top">
+            <div>
+                <h1 class="title is-1 has-text-light">
+                    WeatherOrNot
+                </h1>
+                <p class="subtitle has-text-light">
+                    Your <strong class="has-text-light">Travel Weather</strong> Source
+                </p>
+            </div>
+            
+            <section id="time-container">
+                <p id="currentTime"></p>
+            </section>
+        </div>
         <div class="location-box">
-            <!-- <a href="#" id="iconLink">
-                <i id=use-location class="material-icons">my_location</i></button>
-            </a> -->
             <button id="use-location" style="font-size:24px"><i class="material-icons">my_location</i></button>
             <input class="input is-rounded" type="text" placeholder="Enter Your City">
+            <button id="input-btn" class="button is-success is-rounded">SEARCH</button>
+              <!-- <button id="input-btn" class="btn" aria-label="search">  <i class="fas fa-save" aria-hidden="true"></i>
+            </button> -->
+            <!-- <button class="button is-rounded">Rounded</button> -->
+            <!-- <button class="button is-link is-rounded">Rounded</button> -->
+            <!-- <button class="button is-warning">Normal</button> -->
+
         </div>
         <div id="city-history" class="city-history container">
-            <button class="past-city">New Orleans</button>
-            <button class="past-city">Miami</button>
-            <button class="past-city">New Orleans</button>
-            <button class="past-city">Orlando</button>
-            <button class="past-city">Chicago</button>
-            <button class="past-city">Harlem</button>
-            <button class="past-city">Oakland</button>
-            <button class="past-city">Dallas</button>
+            <button class="past-city button is-info is-rounded is-small">New Orleans</button>
+            <button class="past-city button is-info is-rounded is-small">Miami</button>
+            <button class="past-city button is-info is-rounded is-small">New Orleans</button>
+            <button class="past-city button is-info is-rounded is-small">Orlando</button>
+            <button class="past-city button is-info is-rounded is-small">Chicago</button>
+            <button class="past-city button is-info is-rounded is-small">Harlem</button>
+            <button class="past-city button is-info is-rounded is-small">Oakland</button>
+            <button class="past-city button is-info is-rounded is-small">Dallas</button>
 
         </div>
     </div>
