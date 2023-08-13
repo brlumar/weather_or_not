@@ -1,7 +1,7 @@
 var currentDay = $('#currentDay'); //variable that points to the day in the DOM
 var currentTime = $('#currentTime'); //variable that points to the time in the DOM
 
-var gpsButton = $('#iconLink');
+var gpsButton = $('#use-location');
 
 var currentHour = dayjs().hour(); //gets the current hour
 
@@ -14,13 +14,13 @@ setInterval(function () {
     currentTime.text(dateInterval.format('MMM,DD YYYY hh:mm:ss a'));
 }, 1000);
 
-$('#gpsButton').on('click', function(){
+$(gpsButton).on('click', function(){
     console.log('button clicked');
 });
 
 
-function getWeatherData() {
-    navigator.geolocation.getCurrentPosition((success) => {
+function getWeatherData() { //function that gets weather data from open weather man api
+    navigator.geolocation.getCurrentPosition((success) => { 
         let { latitude, longitude } = success.coords;
 
         fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`).then(res=>res.json()).then(data=>{
