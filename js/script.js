@@ -39,12 +39,12 @@ $(inputButton).on('click', function(){
 
 function checkInput(input) {
     // Regular expressions for zip codes and city names
-    const zipCodePattern = /^\d{5}$/; // Assumes a 5-digit zip code
-    const cityNamePattern = /^[A-Za-z\s]+$/; // Allows letters and spaces for city name
+    const zipCodeCheck = /^\d{5}$/; // Assumes a 5-digit zip code
+    const cityNameCheck = /^[A-Za-z\s]+$/; // Allows letters and spaces for city name
   
-    if (zipCodePattern.test(input)) {
+    if (zipCodeCheck.test(input)) {
       return 'Zip Code';
-    } else if (cityNamePattern.test(input)) {
+    } else if (cityNameCheck.test(input)) {
       return 'City Name';
     } else {
       return 'Unknown';
