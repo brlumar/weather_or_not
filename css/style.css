@@ -26,6 +26,7 @@ body {
     max-width: 800;
     color: azure;
 }
+
 .title-top{
     display: flex; 
     justify-content: space-between; 
