@@ -24,12 +24,32 @@ $(gpsButton).on('click', function(){
 
 $(inputButton).on('click', function(){
     cityName = cityInput.val();
+    var checker =checkInput(cityName);
+    if(checker === 'City Name'){
+        console.log("thats a city son!") 
     getWeatherDataCity();
     console.log('input entered');
+    }else{
+        console.log("that's a zip code kid");
+    }
+    
     cityInput.val('');
     
 });
 
+function checkInput(input) {
+    // Regular expressions for zip codes and city names
+    const zipCodePattern = /^\d{5}$/; // Assumes a 5-digit zip code
+    const cityNamePattern = /^[A-Za-z\s]+$/; // Allows letters and spaces for city name
+  
+    if (zipCodePattern.test(input)) {
+      return 'Zip Code';
+    } else if (cityNamePattern.test(input)) {
+      return 'City Name';
+    } else {
+      return 'Unknown';
+    }
+  }
 // function clearInput(){
 //     cityInput.
 // }
