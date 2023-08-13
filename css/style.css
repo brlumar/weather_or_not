@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(../images/istockphoto-477110708-170667a.webp);
+    /* background-image: url(../images/istockphoto-477110708-170667a.webp); */
     background-size:cover;
     background-repeat: no-repeat; 
 
@@ -20,7 +20,7 @@ body {
     border: 1px solid white;
     border-radius: 10px;
     /* background: rgba(237, 212, 50, 0.778); */
-    background-image: url(../images/sea-164989_1280.jpg);
+    /* background-image: url(../images/sea-164989_1280.jpg); */
     background-position: 50% 80%; 
     background-repeat: repeat;
     max-width: 800;
